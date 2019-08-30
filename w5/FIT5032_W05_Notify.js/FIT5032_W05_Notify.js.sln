@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIT5032_W05_Notify.js", "FIT5032_W05_Notify.js\FIT5032_W05_Notify.js.csproj", "{F5CB181F-E3BE-4968-8D81-D7CDC2A20A24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5CB181F-E3BE-4968-8D81-D7CDC2A20A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CB181F-E3BE-4968-8D81-D7CDC2A20A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CB181F-E3BE-4968-8D81-D7CDC2A20A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CB181F-E3BE-4968-8D81-D7CDC2A20A24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C2927C6-6DD7-4933-AFA4-18B9BDB64A27}
+	EndGlobalSection
+EndGlobal
