@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FIT5032_Assignment_DatabaseFirstModelStoreContainer" CdmEntityContainer="FIT5032_Assignment_DatabaseFirstEntities">
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="FIT5032_Assignment_DatabaseFirstModel.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Resturent_id" ColumnName="Resturent_id" />
+          <ScalarProperty Name="Customer_id" ColumnName="Customer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reg_Customer">
+      <EntityTypeMapping TypeName="FIT5032_Assignment_DatabaseFirstModel.Reg_Customer">
+        <MappingFragment StoreEntitySet="Reg_Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Email" ColumnName="C_Email" />
+          <ScalarProperty Name="C_Password" ColumnName="C_Password" />
+          <ScalarProperty Name="CF_Name" ColumnName="CF_Name" />
+          <ScalarProperty Name="CL_Name" ColumnName="CL_Name" />
+          <ScalarProperty Name="C_Phone" ColumnName="C_Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Res_Owner">
+      <EntityTypeMapping TypeName="FIT5032_Assignment_DatabaseFirstModel.Res_Owner">
+        <MappingFragment StoreEntitySet="Res_Owner">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="O_Email" ColumnName="O_Email" />
+          <ScalarProperty Name="O_Password" ColumnName="O_Password" />
+          <ScalarProperty Name="OF_Name" ColumnName="OF_Name" />
+          <ScalarProperty Name="OL_Name" ColumnName="OL_Name" />
+          <ScalarProperty Name="O_Phone" ColumnName="O_Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="FIT5032_Assignment_DatabaseFirstModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="R_Name" ColumnName="R_Name" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="RT_Service" ColumnName="RT_Service" />
+          <ScalarProperty Name="RO_Email" ColumnName="RO_Email" />
+          <ScalarProperty Name="ROPhone" ColumnName="ROPhone" />
+          <ScalarProperty Name="Res_O_id" ColumnName="Res_O_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
