@@ -24,6 +24,14 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Restaurants", "Index", "Restaurants")</li>
+                        <li>@Html.ActionLink("Res_Comments", "Index", "Res_Comments")</li>
+                        <li>@Html.ActionLink("Res_Location", "Index", "Res_Location")</li>
+                        <li>@Html.ActionLink("Cust_Booking", "Index", "Cust_Booking")</li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

@@ -170,8 +170,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Cust_BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RestaurantsController.cs" />
+    <Compile Include="Controllers\Res_CommentsController.cs" />
+    <Compile Include="Controllers\Res_LocationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -296,6 +300,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Restaurants\Create.cshtml" />
+    <Content Include="Views\Restaurants\Delete.cshtml" />
+    <Content Include="Views\Restaurants\Details.cshtml" />
+    <Content Include="Views\Restaurants\Edit.cshtml" />
+    <Content Include="Views\Restaurants\Index.cshtml" />
+    <Content Include="Views\Cust_Booking\Create.cshtml" />
+    <Content Include="Views\Cust_Booking\Delete.cshtml" />
+    <Content Include="Views\Cust_Booking\Details.cshtml" />
+    <Content Include="Views\Cust_Booking\Edit.cshtml" />
+    <Content Include="Views\Cust_Booking\Index.cshtml" />
+    <Content Include="Views\Res_Location\Create.cshtml" />
+    <Content Include="Views\Res_Location\Delete.cshtml" />
+    <Content Include="Views\Res_Location\Details.cshtml" />
+    <Content Include="Views\Res_Location\Edit.cshtml" />
+    <Content Include="Views\Res_Location\Index.cshtml" />
+    <Content Include="Views\Res_Comments\Create.cshtml" />
+    <Content Include="Views\Res_Comments\Delete.cshtml" />
+    <Content Include="Views\Res_Comments\Details.cshtml" />
+    <Content Include="Views\Res_Comments\Edit.cshtml" />
+    <Content Include="Views\Res_Comments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

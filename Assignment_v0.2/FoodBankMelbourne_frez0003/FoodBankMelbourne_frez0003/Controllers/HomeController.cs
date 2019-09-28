@@ -20,7 +20,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
 
             return View();
         }
-
+        [Authorize]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
