@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2307fe6bfc2e42c5bc389159d9855a0f" Name="Diagram1">
+        <EntityTypeShape EntityType="FooodBankMelb_Model.Cust_Booking" Width="1.5" PointX="6.125" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FooodBankMelb_Model.Reg_Customer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FooodBankMelb_Model.Res_Comments" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FooodBankMelb_Model.Res_Location" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FooodBankMelb_Model.Restaurant" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="FooodBankMelb_Model.FK__Cust_Book__Custo__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="FooodBankMelb_Model.FK__Cust_Book__Restu__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="FooodBankMelb_Model.FK__Res_Commen__R_Id__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="FooodBankMelb_Model.FK__Res_Locat__Res_I__3E52440B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frez0003_FoodBankMelbourne", "frez0003_FoodBankMelbourne\frez0003_FoodBankMelbourne.csproj", "{8C2CC998-3B9E-46F9-A20A-251772E03997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C2CC998-3B9E-46F9-A20A-251772E03997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2CC998-3B9E-46F9-A20A-251772E03997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2CC998-3B9E-46F9-A20A-251772E03997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2CC998-3B9E-46F9-A20A-251772E03997}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {301F36C8-EDD5-4010-A225-7B2B9236A6AE}
+	EndGlobalSection
+EndGlobal
