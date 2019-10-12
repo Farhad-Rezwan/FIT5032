@@ -7,21 +7,24 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FoodBankMelbourne_frez0003.Models;
-using Microsoft.AspNet.Identity;
 
 namespace FoodBankMelbourne_frez0003.Controllers
 {
+    [Authorize(Roles = "Customer, Administrator")]
     public class Cust_BookingController : Controller
     {
         private FoodBankMelbourne_Entities db = new FoodBankMelbourne_Entities();
 
         // GET: Cust_Booking
+        [Authorize(Roles = "Customer, Administrator")]
         public ActionResult Index()
         {
-            return View();
+            var cust_Booking = db.Cust_Booking.Include(c => c.AspNetUser).Include(c => c.Restaurant);
+            return View(cust_Booking.ToList());
         }
 
         // GET: Cust_Booking/Details/5
+        [Authorize(Roles = "Customer, Administrator")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +40,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Cust_Booking/Create
+        [Authorize(Roles = "Customer")]
         public ActionResult Create()
         {
             ViewBag.Customer_id = new SelectList(db.AspNetUsers, "Id", "Email");
@@ -49,6 +53,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
         public ActionResult Create([Bind(Include = "Id,Resturent_id,Customer_id,Booking_Date_time")] Cust_Booking cust_Booking)
         {
             if (ModelState.IsValid)
@@ -58,12 +63,13 @@ namespace FoodBankMelbourne_frez0003.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Resturent_id = new SelectList(db.Restaurants, "Id", "R_Name", cust_Booking.Resturent_id);
             ViewBag.Customer_id = new SelectList(db.AspNetUsers, "Id", "Email", cust_Booking.Customer_id);
+            ViewBag.Resturent_id = new SelectList(db.Restaurants, "Id", "R_Name", cust_Booking.Resturent_id);
             return View(cust_Booking);
         }
 
         // GET: Cust_Booking/Edit/5
+        [Authorize(Roles = "Customer")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +91,8 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
+
         public ActionResult Edit([Bind(Include = "Id,Resturent_id,Customer_id,Booking_Date_time")] Cust_Booking cust_Booking)
         {
             if (ModelState.IsValid)
@@ -99,6 +107,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Cust_Booking/Delete/5
+        [Authorize(Roles = "Customer")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +125,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // POST: Cust_Booking/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
         public ActionResult DeleteConfirmed(int id)
         {
             Cust_Booking cust_Booking = db.Cust_Booking.Find(id);
@@ -134,18 +144,3 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
     }
 }
-
-
-
-//public Aactionresult index()
-//{
-//    string usre = user.identity.getuserid();
-//    using (var context = new foodbankmelbourne_entities())
-//    {
-//        var req = (from c in context.cust_booking where c.customer_id == usre select c.id);
-//    }
-
-//    return view();
-//    //var cust_booking = db.cust_booking.include(c => c.aspnetuser).include(c => c.restaurant);
-//    //return view(cust_booking.tolist());
-//}

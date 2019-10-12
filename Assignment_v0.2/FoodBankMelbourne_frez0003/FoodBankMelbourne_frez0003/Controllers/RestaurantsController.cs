@@ -15,11 +15,13 @@ namespace FoodBankMelbourne_frez0003.Controllers
         private FoodBankMelbourne_Entities db = new FoodBankMelbourne_Entities();
 
         // GET: Restaurants
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Restaurants.ToList());
         }
 
+        [Authorize (Roles = "Administrator, Customer")]
         // GET: Restaurants/Details/5
         public ActionResult Details(int? id)
         {
@@ -47,6 +49,8 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
+
         public ActionResult Create([Bind(Include = "Id,R_Name,Descrip,RT_Service")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
@@ -79,6 +83,8 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
+
         public ActionResult Edit([Bind(Include = "Id,R_Name,Descrip,RT_Service")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
@@ -108,6 +114,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // POST: Restaurants/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public ActionResult DeleteConfirmed(int id)
         {
             Restaurant restaurant = db.Restaurants.Find(id);

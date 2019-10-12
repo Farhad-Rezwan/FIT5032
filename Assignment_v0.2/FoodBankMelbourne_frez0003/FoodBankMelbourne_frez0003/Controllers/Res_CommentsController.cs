@@ -15,6 +15,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         private FoodBankMelbourne_Entities db = new FoodBankMelbourne_Entities();
 
         // GET: Res_Comments
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var res_Comments = db.Res_Comments.Include(r => r.Restaurant);
@@ -22,6 +23,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Res_Comments/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Res_Comments/Create
+        [Authorize(Roles = "Customer")]
         public ActionResult Create()
         {
             ViewBag.R_Id = new SelectList(db.Restaurants, "Id", "R_Name");
@@ -48,6 +51,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
         public ActionResult Create([Bind(Include = "Id,Cus_Init,Com_String,Com_Rate,R_Id")] Res_Comments res_Comments)
         {
             if (ModelState.IsValid)
@@ -62,6 +66,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Res_Comments/Edit/5
+        [Authorize (Roles ="Customer")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +87,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer")]
         public ActionResult Edit([Bind(Include = "Id,Cus_Init,Com_String,Com_Rate,R_Id")] Res_Comments res_Comments)
         {
             if (ModelState.IsValid)
@@ -95,6 +101,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Res_Comments/Delete/5
+        [Authorize(Roles = "Customer, Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +119,8 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // POST: Res_Comments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Customer, Administrator")]
+
         public ActionResult DeleteConfirmed(int id)
         {
             Res_Comments res_Comments = db.Res_Comments.Find(id);

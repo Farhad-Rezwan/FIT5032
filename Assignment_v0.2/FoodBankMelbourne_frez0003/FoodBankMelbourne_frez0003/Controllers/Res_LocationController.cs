@@ -9,12 +9,14 @@ using System.Web.Mvc;
 using FoodBankMelbourne_frez0003.Models;
 
 namespace FoodBankMelbourne_frez0003.Controllers
-{
+{  
+    [Authorize (Roles ="Administrator")]
     public class Res_LocationController : Controller
     {
         private FoodBankMelbourne_Entities db = new FoodBankMelbourne_Entities();
 
         // GET: Res_Location
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var res_Location = db.Res_Location.Include(r => r.Restaurant);
@@ -22,6 +24,7 @@ namespace FoodBankMelbourne_frez0003.Controllers
         }
 
         // GET: Res_Location/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)

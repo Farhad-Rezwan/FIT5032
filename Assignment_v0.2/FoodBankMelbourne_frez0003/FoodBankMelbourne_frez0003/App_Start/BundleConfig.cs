@@ -22,7 +22,11 @@ namespace FoodBankMelbourne_frez0003
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/bootstrap-datetimepickeer.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/bootstrap-datetimepicker.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/mapbox").Include(
+                      "~/Scripts/location.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -31,3 +35,7 @@ namespace FoodBankMelbourne_frez0003
         }
     }
 }
+
+
+
+//"~/Content/bootstrap-datetimepicker.css"));

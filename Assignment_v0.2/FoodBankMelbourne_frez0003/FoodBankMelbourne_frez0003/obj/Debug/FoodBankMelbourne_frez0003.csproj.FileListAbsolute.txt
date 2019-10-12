@@ -102,3 +102,6 @@ C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0
 C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\obj\Debug\FoodBankMelbourne_frez0003.dll
 C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\obj\Debug\FoodBankMelbourne_frez0003.pdb
 C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\obj\Debug\FoodBankMelbourne_frez0003.csprojAssemblyReference.cache
+C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\bin\SendGrid.dll
+C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\bin\SendGrid.pdb
+C:\Users\frez0003\Desktop\Github\FIT5032\Assignment_v0.2\FoodBankMelbourne_frez0003\FoodBankMelbourne_frez0003\bin\SendGrid.xml

@@ -155,6 +155,10 @@ namespace FoodBankMelbourne_frez0003.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    result = UserManager.AddToRole(user.Id, "Customer");
+                }
+                if (result.Succeeded)
+                {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
@@ -369,6 +373,11 @@ namespace FoodBankMelbourne_frez0003.Controllers
                 }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    result = UserManager.AddToRole(user.Id, "Customer");
+                }
                 if (result.Succeeded)
                 {
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);
