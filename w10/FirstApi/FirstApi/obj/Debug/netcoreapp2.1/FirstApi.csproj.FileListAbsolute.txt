@@ -1,0 +1,16 @@
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\FirstApi.deps.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\FirstApi.runtimeconfig.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\FirstApi.runtimeconfig.dev.json
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\FirstApi.dll
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\bin\Debug\netcoreapp2.1\FirstApi.pdb
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.csprojAssemblyReference.cache
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.RazorAssemblyInfo.cache
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.RazorAssemblyInfo.cs
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.AssemblyInfoInputs.cache
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.AssemblyInfo.cs
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.RazorTargetAssemblyInfo.cache
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.dll
+C:\Users\frez0003\Desktop\Github\FIT5032\w10\FirstApi\FirstApi\obj\Debug\netcoreapp2.1\FirstApi.pdb
