@@ -11,21 +11,13 @@ namespace FoodBankMelbourne_frez0003.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class Res_Location
     {
         public int Id { get; set; }
         public string L_Name { get; set; }
         public string S_Address { get; set; }
-
-        [Column(TypeName = "numeric")]
-        [DisplayFormat(DataFormatString = "{0:###.########}")]
         public decimal Latitude { get; set; }
-
-        [Column(TypeName = "numeric")]
-        [DisplayFormat(DataFormatString = "{0:###.########}")]
         public decimal Longitude { get; set; }
         public int Res_Id { get; set; }
     
