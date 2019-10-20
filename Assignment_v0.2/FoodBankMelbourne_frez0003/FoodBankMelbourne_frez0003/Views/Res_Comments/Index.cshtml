@@ -36,7 +36,8 @@
                     @Html.DisplayFor(modelItem => item.Cus_Init)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Com_String)
+                    @*@Html.DisplayFor(modelItem => item.Com_String)*@
+                    @Html.Raw(item.Com_String)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Com_Rate)

@@ -24,7 +24,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Com_String)
+            @*@Html.DisplayFor(model => model.Com_String)*@
+            @Html.Raw(Model.Com_String)
         </dd>
 
         <dt>
@@ -49,3 +50,13 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        tinymce.init({
+            selector: '#textAreaA'
+        });
+    </script>
+
+}

@@ -11,11 +11,15 @@ namespace FoodBankMelbourne_frez0003.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public partial class Res_Comments
     {
         public int Id { get; set; }
         public string Cus_Init { get; set; }
+        [Required]
+        [AllowHtml]
         public string Com_String { get; set; }
         public Nullable<decimal> Com_Rate { get; set; }
         public int R_Id { get; set; }
