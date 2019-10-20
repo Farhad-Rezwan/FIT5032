@@ -236,6 +236,7 @@
       <DependentUpon>FoodBankMelbourne_Models1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EmailSenderViewModel.cs" />
+    <Compile Include="Models\EmailWithAttachmmentViewModel.cs" />
     <Compile Include="Models\FoodBankMelbourne_Models1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,6 +265,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmailSendingOption.cs" />
+    <Compile Include="Services\EmailWithAttachmentSender.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -683,10 +685,11 @@
     <Content Include="Views\Res_Comments\Edit.cshtml" />
     <Content Include="Views\Res_Comments\Index.cshtml" />
     <Content Include="Views\Home\SendEmail.cshtml" />
+    <Content Include="Views\Home\SendEmailWithAttachment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Pictures\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

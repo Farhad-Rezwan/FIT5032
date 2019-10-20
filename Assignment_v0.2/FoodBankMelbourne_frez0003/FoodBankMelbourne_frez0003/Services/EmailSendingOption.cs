@@ -14,7 +14,7 @@ namespace FoodBankMelbourne_frez0003.Services
         public void Send(String toEmail, String subject, String contents)
         {
             var client = new SendGridClient(API_KEY);
-            var from = new EmailAddress("noreply@localhost.com", "FIT5032 Example Email User");
+            var from = new EmailAddress("noreply@localhost.com", "FoodBankMelbourne FIT5032");
             var to = new EmailAddress(toEmail, "");
             var plainTextContent = contents;
             var htmlContent = "<p>" + contents + "</p>";

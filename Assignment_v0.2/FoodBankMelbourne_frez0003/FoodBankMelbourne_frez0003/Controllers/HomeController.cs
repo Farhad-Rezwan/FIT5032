@@ -2,6 +2,7 @@
 using FoodBankMelbourne_frez0003.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -62,6 +63,35 @@ namespace FoodBankMelbourne_frez0003.Controllers
             }
 
             return View();
+        }
+        public ActionResult SendEmailWithAttachment()
+        {
+            return View(new EmailWithAttachmmentViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult SendEmailWithAttachment(EmailWithAttachmmentViewModel model)
+        {
+            try
+            {
+                string path = Server.MapPath("~/Uploads");
+                string fileName = Path.GetFileName(model.Attachment.FileName);
+                string fullPath = Path.Combine(path, fileName);
+                model.Attachment.SaveAs(fullPath);
+
+                EmailWithAttachmentSender emailSender = new EmailWithAttachmentSender();
+                emailSender.Sender(model, fullPath);
+
+                ViewBag.Result = "Success: E-mail sent";
+
+                ModelState.Clear();
+
+                return View(new EmailWithAttachmmentViewModel());
+            }
+            catch (Exception)
+            {
+                return View();
+            }
         }
     }
 }
