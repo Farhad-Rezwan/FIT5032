@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FoodBankMelbourne_frez0003.Models;
+using System.Text;
 
 namespace FoodBankMelbourne_frez0003.Controllers
 {
@@ -48,11 +49,45 @@ namespace FoodBankMelbourne_frez0003.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         [Authorize(Roles = "Administrator")]
 
         public ActionResult Create([Bind(Include = "Id,R_Name,Descrip,RT_Service")] Restaurant restaurant)
         {
+            StringBuilder sbDescription = new StringBuilder();
+            sbDescription.Append(HttpUtility.HtmlEncode(restaurant.Descrip));
+
+            sbDescription.Replace("&lt;b&gt;", "<b>");
+            sbDescription.Replace("&lt;/b&gt;", "</b>");
+            sbDescription.Replace("&lt;u&gt;", "<u>");
+            sbDescription.Replace("&lt;/u&gt;", "</u>");
+
+            restaurant.Descrip = sbDescription.ToString();
+
+
+
+            StringBuilder sbRName = new StringBuilder();
+            sbRName.Append(HttpUtility.HtmlEncode(restaurant.R_Name));
+
+            sbRName.Replace("&lt;b&gt;", "<b>");
+            sbRName.Replace("&lt;/b&gt;", "</b>");
+            sbRName.Replace("&lt;u&gt;", "<u>");
+            sbRName.Replace("&lt;/u&gt;", "</u>");
+
+            restaurant.R_Name = sbDescription.ToString();
+
+            StringBuilder sbRType = new StringBuilder();
+            sbRType.Append(HttpUtility.HtmlEncode(restaurant.RT_Service));
+
+            sbRType.Replace("&lt;b&gt;", "<b>");
+            sbRType.Replace("&lt;/b&gt;", "</b>");
+            sbRType.Replace("&lt;u&gt;", "<u>");
+            sbRType.Replace("&lt;/u&gt;", "</u>");
+
+            restaurant.RT_Service = sbDescription.ToString();
+
+
             if (ModelState.IsValid)
             {
                 db.Restaurants.Add(restaurant);

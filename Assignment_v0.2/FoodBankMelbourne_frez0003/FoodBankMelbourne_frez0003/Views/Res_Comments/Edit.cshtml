@@ -29,7 +29,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Com_String, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Com_String, new { htmlAttributes = new { @class = "form-control", @id = "textAreaA" } })
+                @Html.EditorFor(model => model.Com_String, new { htmlAttributes = new { @class = "form-control", @id = "textAreaA"} })
                 @Html.ValidationMessageFor(model => model.Com_String, "", new { @class = "text-danger" })
             </div>
         </div>

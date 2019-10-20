@@ -11,7 +11,8 @@ namespace FoodBankMelbourne_frez0003.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web.Mvc;
+
     public partial class Restaurant
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +22,13 @@ namespace FoodBankMelbourne_frez0003.Models
             this.Res_Comments = new HashSet<Res_Comments>();
             this.Res_Location = new HashSet<Res_Location>();
         }
-    
+
         public int Id { get; set; }
+        [AllowHtml]
         public string R_Name { get; set; }
+        [AllowHtml]
         public string Descrip { get; set; }
+        [AllowHtml]
         public string RT_Service { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

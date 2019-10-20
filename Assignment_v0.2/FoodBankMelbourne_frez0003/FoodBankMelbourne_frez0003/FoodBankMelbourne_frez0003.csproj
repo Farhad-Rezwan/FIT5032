@@ -790,11 +790,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Restaurants\Create.cshtml" />
-    <Content Include="Views\Restaurants\Delete.cshtml" />
-    <Content Include="Views\Restaurants\Details.cshtml" />
-    <Content Include="Views\Restaurants\Edit.cshtml" />
-    <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Cust_Booking\Create.cshtml" />
     <Content Include="Views\Cust_Booking\Delete.cshtml" />
     <Content Include="Views\Cust_Booking\Details.cshtml" />
@@ -815,6 +810,11 @@
     <Content Include="Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\skins\ui\oxide-dark\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Views\Restaurants\Index.cshtml" />
+    <Content Include="Views\Restaurants\Create.cshtml" />
+    <Content Include="Views\Restaurants\Edit.cshtml" />
+    <Content Include="Views\Restaurants\Delete.cshtml" />
+    <Content Include="Views\Restaurants\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
