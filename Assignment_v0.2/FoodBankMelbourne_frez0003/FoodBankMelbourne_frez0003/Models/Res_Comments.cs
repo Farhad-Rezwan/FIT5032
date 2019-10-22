@@ -17,10 +17,12 @@ namespace FoodBankMelbourne_frez0003.Models
     public partial class Res_Comments
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "Please Enter Name")]
         public string Cus_Init { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please Enter your Comment")]
         [AllowHtml]
         public string Com_String { get; set; }
+        [Range(0,5,ErrorMessage ="Enter Rating Between 0 to 5")]
         public Nullable<decimal> Com_Rate { get; set; }
         public int R_Id { get; set; }
     

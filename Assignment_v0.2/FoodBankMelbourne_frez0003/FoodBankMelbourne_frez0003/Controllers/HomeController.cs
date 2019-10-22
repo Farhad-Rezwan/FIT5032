@@ -31,12 +31,14 @@ namespace FoodBankMelbourne_frez0003.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult SendEmail()
         {
             return View(new EmailSenderViewModel());
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public ActionResult SendEmail(EmailSenderViewModel model)
         {
             if (ModelState.IsValid)
@@ -64,12 +66,14 @@ namespace FoodBankMelbourne_frez0003.Controllers
 
             return View();
         }
+        [Authorize(Roles = "Administrator")]
         public ActionResult SendEmailWithAttachment()
         {
             return View(new EmailWithAttachmmentViewModel());
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public ActionResult SendEmailWithAttachment(EmailWithAttachmmentViewModel model)
         {
             try

@@ -22,19 +22,32 @@ namespace FoodBankMelbourne_frez0003.Services
 
             var from = new EmailAddress("noreply@localhost.com", "FoodBank Melbourne B-Email With Attachment");
 
-            var to = new List<EmailAddress>
+            var tos = model.EmailTo;
+            string[] tockens = tos.Split(',');
+
+            
+            
+            foreach(string i in tockens)
             {
-                new EmailAddress (model.EmailTo, "User A")
+                var to = new List<EmailAddress>
+                {
+
+                new EmailAddress (i, "User")
             };
 
 
-            var message = new SendGridMessage();
-            message.SetFrom("noreply@localhost.com", "Lab Assessment 3 Email with Attachment");
-            message.PlainTextContent = model.EmailContent;
-            message.Subject = model.Sub;
-            message.AddAttachment(model.Attachment.FileName, file);
-            message.AddTos(to);
-            var respond = client.SendEmailAsync(message);
+                var users = model.EmailTo;
+
+                var message = new SendGridMessage();
+                message.SetFrom("noreply@localhost.com", "Lab Assessment 3 Email with Attachment");
+                message.PlainTextContent = model.EmailContent;
+                message.Subject = model.Sub;
+                message.AddAttachment(model.Attachment.FileName, file);
+                message.AddTos(to);
+                var respond = client.SendEmailAsync(message);
+
+            }
+            
 
 
         }

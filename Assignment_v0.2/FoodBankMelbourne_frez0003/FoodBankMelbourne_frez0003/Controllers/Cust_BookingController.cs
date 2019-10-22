@@ -19,7 +19,8 @@ namespace FoodBankMelbourne_frez0003.Controllers
         [Authorize(Roles = "Customer, Administrator")]
         public ActionResult Index()
         {
-            var cust_Booking = db.Cust_Booking.Include(c => c.AspNetUser).Include(c => c.Restaurant);
+            var user = User.Identity.Name;
+            var cust_Booking = db.Cust_Booking.Include(c => c.AspNetUser).Where(c=> c.AspNetUser.Email == user).Include(c => c.Restaurant);
             return View(cust_Booking.ToList());
         }
 
