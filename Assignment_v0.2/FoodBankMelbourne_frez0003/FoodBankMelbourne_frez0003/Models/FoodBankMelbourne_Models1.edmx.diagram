@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a386838f1a31466a9724dd31e9f505e8" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+      <Diagram DiagramId="a386838f1a31466a9724dd31e9f505e8" Name="Diagram1" ZoomLevel="29">
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.C__MigrationHistory" Width="1.5" PointX="0.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetRole" Width="1.5" PointX="0.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetUserClaim" Width="1.5" PointX="8.375" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetUserLogin" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodBankMelbourneModel.AspNetUser" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.Cust_Booking" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.Res_Comments" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.Res_Location" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodBankMelbourneModel.Restaurant" Width="1.5" PointX="6" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.Cust_Booking" Width="1.5" PointX="8.375" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.Res_Comments" Width="1.5" PointX="8.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.Res_Location" Width="1.5" PointX="8.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodBankMelbourneModel.Restaurant" Width="1.5" PointX="5.875" PointY="9.375" IsExpanded="true" />
         <AssociationConnector Association="FoodBankMelbourneModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="FoodBankMelbourneModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="FoodBankMelbourneModel.FK__Cust_Book__Custo__398D8EEE" ManuallyRouted="false" />
